@@ -92,6 +92,8 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 " for python docstring
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 
+Plugin 'Raimondi/delimitMate'
+
 "for code alignment
 Plugin 'godlygeek/tabular'
 nmap <Leader>a= :Tabularize /=<CR>
