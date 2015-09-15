@@ -59,8 +59,9 @@ set whichwrap+=<,>,h,l
 
 filetype off " required! turn off
 set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=C:\Users\xhe\.vim\bundle\Vundle.vim
 call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -82,6 +83,13 @@ filetype plugin indent on    " required
 
 
 "################### Auto complete ###################"
+
+"Best auto complete plugin ever!
+Plugin 'Valloric/YouCompleteMe'
+"youcompleteme: change completion select
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
+
 " for python docstring
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 
@@ -228,10 +236,8 @@ let python_highlight_all = 1
 
 
 Plugin 'mileszs/ack.vim'
-Plugin 'davidhalter/jedi-vim' 
 "################### 
 filetype plugin indent on
-
 
 
 "==========================================
